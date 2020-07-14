@@ -14,7 +14,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/", "/api")
+        http.authorizeRequests()
+                .antMatchers("/", "/api/**","/console/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -25,6 +26,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .permitAll();
+
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
     }
 
     @Bean
