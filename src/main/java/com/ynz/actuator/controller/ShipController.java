@@ -12,25 +12,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/ships")
 @RequiredArgsConstructor
 public class ShipController {
     private final ShipRepository shipRepository;
 
-    @GetMapping("/ships")
+    @GetMapping("")
     public ResponseEntity<List<Ship>> findAllShips() {
         List<Ship> ships = new ArrayList<>();
         shipRepository.findAll().forEach(ship -> ships.add(ship));
         return new ResponseEntity(ships, HttpStatus.OK);
     }
 
-    @GetMapping("/ships/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Ship> findShipById(@PathVariable("id") int id) {
         Ship found = getShipById(id);
         return new ResponseEntity(found, HttpStatus.FOUND);
     }
 
-    @DeleteMapping("/ships/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteShipById(@PathVariable("id") int id) {
         getShipById(id);
         shipRepository.deleteById(id);
