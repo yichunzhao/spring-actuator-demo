@@ -5,6 +5,8 @@ demo how to use a spring actuator to monitor the application.
 * Provides status of application
 * Provides status of dependencies
 
+![image](https://user-images.githubusercontent.com/17804600/87544117-338d7200-c6a6-11ea-8c55-0d67098acb4c.png)
+
 # Info endpoint
 * Provides customizable piont of information
 
@@ -14,6 +16,8 @@ demo how to use a spring actuator to monitor the application.
 * Memory dumps: Heapdump and threaddump
 * Mappings:a list of web URL mappings
 * Metrics:micrometer metrix
+
+![image](https://user-images.githubusercontent.com/17804600/87543538-389df180-c6a5-11ea-9e33-1807e23e5dde.png)
 
 # Define Exposures
 * management.endpoints.jmx.exposure.exclude/include
