@@ -14,6 +14,7 @@ demo how to use a spring actuator to monitor the application.
 * Memory dumps: Heapdump and threaddump
 * Mappings:a list of web URL mappings
 * Metrics:micrometer metrix
+
 ![image](https://user-images.githubusercontent.com/17804600/87543538-389df180-c6a5-11ea-9e33-1807e23e5dde.png)
 
 # Define Exposures
